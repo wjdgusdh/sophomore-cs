@@ -89,7 +89,7 @@
 # 두 친구가 공통으로 좋아하는 음식
 
 # print(a.intersection(b))
-
+# ㅇㅇㅇㅇㅇ
 
  
 
