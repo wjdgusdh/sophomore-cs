@@ -1,10 +1,10 @@
 #lang
 
-#ang = 'abcdefg'
+# lang = 'abcdefg'
 
 #print(lang[0])
 
-#rint(lang[:3])
+# print(lang[:3])
 
 
 #문자열 처리
@@ -14,7 +14,7 @@
 
 # juseyo = snack + two
 
-# juseyo += '주세요'
+# juseyo += '달라고'
 
 
 # print(juseyo)
@@ -55,13 +55,40 @@
 # print(s.find("안녕"))
 # print(s.center(9,'-'))
 
-# 20분까지 들음 
+# 문자열 포멧
+
+# print('개발 언어에는 {},{} 등이 있어요.'.format('파이썬','자바'))
+
+# # f-string
+# print(f'동물 2마리를 소개합니다 {python},{java}')
+
+# print("사실\n'포테이토칩'도\n맛있어요")
 
 
- 
 
+#리스트  비닐봉투 같은것
 
+# a = ['파이썬','자바']
+# a.append('C언어,C쁠쁠')
+# print(a)     
 
+# tuple - 만들고나면 수정불가 거의 읽기전용이라고한다
+
+# 세트
+
+a = {'돈가스','보쌈','제육'}
+b = {'짬뽕','초밥','제육'}
+# a만 좋아하는 음식? 차집합
+
+# print(a.difference(b))
+
+# 둘다 좋아하는 음식? 합집합
+
+# print(a.union(b))
+
+# 두 친구가 공통으로 좋아하는 음식
+
+print(a.intersection(b))
 
 
  
