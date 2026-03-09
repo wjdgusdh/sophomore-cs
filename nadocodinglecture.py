@@ -86,11 +86,39 @@
 
 # print(a.union(b))
 
-# 두 친구가 공통으로 좋아하는 음식
+# 두 친구가 공통으로 좋아하는 음식? 교집합
 
 # print(a.intersection(b))
-# ㅇㅇㅇㅇㅇ
+# a.remove('보쌈')
 
- 
+# print(a)
 
 
+##딕셔너리 
+
+# 딕셔너리 = {key1:value1,key2:value2,...}
+
+# person ={
+#     '이름':'정현오',
+#     '나이':'23세',
+#     '키':'181cm',
+#     '몸무게':'85kg'
+    
+# }
+# print(person['나이'])
+
+# print(person.get('롤티어'))
+
+# person['몸무게'] = '80kg'
+
+# print(person['몸무게'])
+
+# person.update({'키':'182cm','몸무게':'80kg'})
+ #딕셔너리에서 특정 키 벨류를 삭제하려면 .pop 메서드
+# print(person['키'])
+
+# print(person.keys())
+
+# print(person.items())
+
+#딕셔너리 끝
