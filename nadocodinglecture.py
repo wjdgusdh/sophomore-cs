@@ -122,3 +122,22 @@
 # print(person.items())
 
 #딕셔너리 끝
+
+#값이 바뀔 일이 없거나 바뀌면 안되는 경우 = 튜플
+
+# today = '토요일'
+# if today == '토요일':
+#     print('게임 한 판')
+# else:
+#     print('폰 5분만')
+# print('공부시작')
+
+
+# if else 활용
+     
+# total = 3
+# if total <= 4:
+#     print('추가비용없습니다.')
+# else:
+#     print('1인당 만원입니다.')
+# print('감사합니다.')
