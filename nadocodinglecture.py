@@ -141,3 +141,4 @@
 # else:
 #     print('1인당 만원입니다.')
 # print('감사합니다.')
+#if else 
