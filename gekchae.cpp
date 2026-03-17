@@ -20,21 +20,21 @@
 
 
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-int main(void)
-{
-    int n1,n2,n3,n4,n5;
-    int pSum = 0, nSum = 0;
-    cout <<"정수 5개 입력: ";
-    cin >>n1>>n2>>n3>>n4>>n5;
+// int main(void)
+// {
+//     int n1,n2,n3,n4,n5;
+//     int pSum = 0, nSum = 0;
+//     cout <<"정수 5개 입력: ";
+//     cin >>n1>>n2>>n3>>n4>>n5;
    
-    if(n1>0)
-       pSum += n1;
-    else
-       nSum += n1;
-    return 0;
+//     if(n1>0)
+//        pSum += n1;
+//     else
+//        nSum += n1;
+//     return 0;
 
 // }
 
@@ -86,5 +86,29 @@ int main(void)
 
 
 
-    return 0;
-}
+//     return 0;
+// }
+
+
+
+// #include <iostream>
+// using namespace std;
+// int main(void)
+// {
+//     int n;
+//     int rev;
+//     cout<<"정수 입력";
+//     cin >> n;
+//     do{
+//         rev = n%10;
+//         cout << rev << " ";
+//         n = n / 10;
+//      }  while (n != 0);
+//     cout << endl;
+
+    
+ 
+        
+//         return 0;
+
+// }
