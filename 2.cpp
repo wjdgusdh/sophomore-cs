@@ -60,24 +60,24 @@
 
 // }
 
-#include <iostream>
-using namespace std;
-int main(void)
-// 입력받은 숫자 갯수만큼 3의 배수를 출력하는 프로그램
-{
-    int cnt;
-    int i = 0;
-    int n = 0;
-    cout<<"갯수 입력:";
-    cin >> cnt;
-    while (n <cnt)
-    {
-        i+= 3;
-        n = n + 1;
-        cout << i << " ";
+// #include <iostream>
+// using namespace std;
+// int main(void)
+// // 입력받은 숫자 갯수만큼 3의 배수를 출력하는 프로그램
+// {
+//     int cnt;
+//     int i = 0;
+//     int n = 0;
+//     cout<<"갯수 입력:";
+//     cin >> cnt;
+//     while (n <cnt)
+//     {
+//         i+= 3;
+//         n = n + 1;
+//         cout << i << " ";
 
        
-    }
+//     }
     
     
 
@@ -86,5 +86,29 @@ int main(void)
 
 
 
-    return 0;
-}
+//     return 0;
+// }
+
+
+
+// #include <iostream>
+// using namespace std;
+// int main(void)
+// {
+//     int n;
+//     int rev;
+//     cout<<"정수 입력";
+//     cin >> n;
+//     do{
+//         rev = n%10;
+//         cout << rev << " ";
+//         n = n / 10;
+//      }  while (n != 0);
+//     cout << endl;
+    
+ 
+        
+//         return 0;
+
+// }
+
