@@ -124,3 +124,39 @@
 //         cout <<endl;
 //     }
 // }
+
+// #include <iostream>
+// using namespace std;
+// int main(void){
+//     int num[10];
+//         for(int i = 0 ; i<10 ; i ++)
+//         num[i] = i ;
+
+//         for (int i = 0; i < 10; i++) 
+//         cout << num[i] << " ";
+        
+
+// return 0;
+
+
+
+
+// }
+
+
+#include <iostream>
+using namespace std;
+int main(void){
+
+    int s[12];
+    for(int i = 0; i < 12; i++)
+        s[i] = rand() % 20;
+
+    for(int i = 0; i < 12; i++)
+        cout << s[i] << "  ";
+    cout << endl;
+
+    return 0;
+}
+
+
