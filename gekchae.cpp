@@ -144,19 +144,65 @@
 // }
 
 
+// #include <iostream>
+// using namespace std;
+// int main(void){
+
+//     int s[12];
+//     for(int i = 0; i < 12; i++)
+//         s[i] = rand() % 20;
+
+//     for(int i = 0; i < 12; i++)
+//         cout << s[i] << "  ";
+//     cout << endl;
+
+//     return 0;
+// }
+
+
+// #include <iostream>
+// using namespace std;
+
+// int sum(int a, int b, int c = 0, int d = 0) {
+//     return a + b + c + d;
+// }
+
+// int main() {
+//     cout << "sum(10, 15) = " << sum(10, 15) << endl;
+//     cout << "sum(10, 15, 25) = " << sum(10, 15, 25) << endl;
+//     cout << "sum(10, 15, 25, 30) = " << sum(10, 15, 25, 30) << endl;
+
+//     return 0;
+// }
+
+
 #include <iostream>
+#include <string>
+#include <cstring>
+
 using namespace std;
-int main(void){
 
-    int s[12];
-    for(int i = 0; i < 12; i++)
-        s[i] = rand() % 20;
+int main(){
 
-    for(int i = 0; i < 12; i++)
-        cout << s[i] << "  ";
-    cout << endl;
+    char name[100];
+    char longest[100];
+    int length = 0;
 
-    return 0;
+    cout << "5명의 이름을 ';'으로 구분하여 입력" << endl;
+    cout << ">>";
+
+    for(int i = 0; i < 5; i ++)
+    {
+        cin.getline(name, 100, ';');
+        cout << i + 1 << ";" << name << endl;
+        if(length < strlen(name)){
+
+            length = strlen(name);
+            strcpy_s(longest, name);
+            
+        }
+        
+    }
+    cout << "가장 긴 이름: " << longest << endl;
+    
 }
-
-
