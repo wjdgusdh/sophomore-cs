@@ -176,33 +176,102 @@
 // }
 
 
+// #include <iostream>
+// #include <string>
+// #include <cstring>
+
+// using namespace std;
+
+// int main(){
+
+//     char name[100];
+//     char longest[100];
+//     int length = 0;
+
+//     cout << "5명의 이름을 ';'으로 구분하여 입력" << endl;
+//     cout << ">>";
+
+//     for(int i = 0; i < 5; i ++)
+//     {
+//         cin.getline(name, 100, ';');
+//         cout << i + 1 << ";" << name << endl;
+//         if(length < strlen(name)){
+
+//             length = strlen(name);
+//             strcpy_s(longest, name);
+            
+//         }
+        
+//     }
+//     cout << "가장 긴 이름: " << longest << endl;
+    
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// class rectangle
+// {
+// public:
+//     int width;
+//     int height;
+
+//     int getArea(){
+
+//         return width * height;
+
+//     }
+// };
+
+
+// int main(){
+//     rectangle r;
+//     r.width = 100;
+//     r.height = 200;
+
+//     cout << "사각형의 면적:" << r.getArea() << endl;
+
+//     return 0;
+// }
+
 #include <iostream>
 #include <string>
 #include <cstring>
 
+
 using namespace std;
 
-int main(){
+class Car
+{
+public:
+    int speed;
+    int gear;
+    string color;
 
-    char name[100];
-    char longest[100];
-    int length = 0;
+    void speedUp() {speed += 20;}
+    void speedDown() { speed -= 10;}
 
-    cout << "5명의 이름을 ';'으로 구분하여 입력" << endl;
-    cout << ">>";
+};
 
-    for(int i = 0; i < 5; i ++)
-    {
-        cin.getline(name, 100, ';');
-        cout << i + 1 << ";" << name << endl;
-        if(length < strlen(name)){
 
-            length = strlen(name);
-            strcpy_s(longest, name);
-            
-        }
-        
-    }
-    cout << "가장 긴 이름: " << longest << endl;
-    
-}
+int main()
+{
+    Car c1, c2;
+    c1.speed = 80;
+    c1.gear = 4;
+    c1.color = "red";
+    c1.speedUp();
+    cout << "현재 c1의 속도는 " << c1.speed << endl;
+
+    c2.speed = 70;
+    c2.gear = 4;
+    c2.color = "blue";
+    c2.speedUp();
+    cout << "현재 c2의 속도는 " << c2.speed << endl;
+
+    return 0;
+}   
+
+
+
+
