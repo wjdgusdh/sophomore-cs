@@ -234,44 +234,107 @@
 //     return 0;
 // }
 
+// #include <iostream>
+// #include <string>
+// #include <cstring>
+
+
+// using namespace std;
+
+// class Car
+// {
+// public:
+//     int speed;
+//     int gear;
+//     string color;
+
+//     void speedUp() {speed += 20;}
+//     void speedDown() { speed -= 10;}
+
+// };
+
+
+// int main()
+// {
+//     Car c1, c2;
+//     c1.speed = 80;
+//     c1.gear = 4;
+//     c1.color = "red";
+//     c1.speedUp();
+//     cout << "현재 c1의 속도는 " << c1.speed << endl;
+
+//     c2.speed = 70;
+//     c2.gear = 4;
+//     c2.color = "blue";
+//     c2.speedUp();
+//     cout << "현재 c2의 속도는 " << c2.speed << endl;
+
+//     return 0;
+// }   
+
+
 #include <iostream>
 #include <string>
 #include <cstring>
-
-
 using namespace std;
 
-class Car
-{
-public:
-    int speed;
-    int gear;
-    string color;
 
-    void speedUp() {speed += 20;}
-    void speedDown() { speed -= 10;}
+class Calculator {
+private:
+    int add;
+    int sub;
+    int mul;
+    int div;
+public:
+    void init();
+    double Add(double, double);
+    double Sub(double, double);
+    double Mul(double, double);
+    double Div(double, double);
+    void ShowOpCnt();
 
 };
 
+void Calculator :: init() {
 
-int main()
-{
-    Car c1, c2;
-    c1.speed = 80;
-    c1.gear = 4;
-    c1.color = "red";
-    c1.speedUp();
-    cout << "현재 c1의 속도는 " << c1.speed << endl;
+    add = sub = mul = div = 0;
+}
+double Calculator :: Add(double a, double b) {
+    add++;
+    return a + b;
+}
+double Calculator :: Sub(double a, double b) {
+    sub++;
+    return a - b;
+}
+double Calculator :: Mul(double a, double b) {
+    mul++;
+    return a * b;
+}
+double Calculator :: Div(double a, double b) {
+    div++;
+    return a / b;
+}
+void Calculator::ShowOpCnt() {
+    cout << "덧셈: " << add << "  ";
+    cout << "뺄셈: " << sub << "  ";
+    cout << "곱셉: " << mul << "  ";
+    cout << "나누기: " << sub << "  ";
+}
 
-    c2.speed = 70;
-    c2.gear = 4;
-    c2.color = "blue";
-    c2.speedUp();
-    cout << "현재 c2의 속도는 " << c2.speed << endl;
+int main (void){
+    Calculator cal;
+    cal.init();
+
+    cout << cal.Add (6, 20) << endl;
+    cout << cal.Sub (6, 20) << endl;
+    cout << cal.Mul (6, 20) << endl;
+    cout << cal.Div (6, 20) << endl;
+
+
+
+
 
     return 0;
-}   
-
-
-
+}
 
