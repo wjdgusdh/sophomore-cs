@@ -38,28 +38,8 @@
 
 // }
 
-// #include <iostream>
-// using namespace std;
-// int main(void)
-// {   
-//     int month;
-//     cout<<"달을 입력하시오";
-//     cin>>month;
 
-//     switch(month) {
-//     case 4: case 6: case 9: case 11:
-//        cout << "30일" << endl;
-//        break;
-//     case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-//        cout << "31일" << endl;
-//        break;
-
-//     }
-//  return 0;
-
-
-// }
-
+// 실습 8입력 받은 숫자 개수만큼 3의 배수를 출력하는 프로그램.
 // #include <iostream>
 // using namespace std;
 // int main(void)
@@ -273,68 +253,182 @@
 // }   
 
 
+// #include <iostream>
+// #include <string>
+// #include <cstring>
+// using namespace std;
+
+
+// class Calculator {
+// private:
+//     int add;
+//     int sub;
+//     int mul;
+//     int div;
+// public:
+//     void init();
+//     double Add(double, double);
+//     double Sub(double, double);
+//     double Mul(double, double);
+//     double Div(double, double);
+//     void ShowOpCnt();
+
+// };
+
+// void Calculator :: init() {
+
+//     add = sub = mul = div = 0;
+// }
+// double Calculator :: Add(double a, double b) {
+//     add++;
+//     return a + b;
+// }
+// double Calculator :: Sub(double a, double b) {
+//     sub++;
+//     return a - b;
+// }
+// double Calculator :: Mul(double a, double b) {
+//     mul++;
+//     return a * b;
+// }
+// double Calculator :: Div(double a, double b) {
+//     div++;
+//     return a / b;
+// }
+// void Calculator::ShowOpCnt() {
+//     cout << "덧셈: " << add << "  ";
+//     cout << "뺄셈: " << sub << "  ";
+//     cout << "곱셉: " << mul << "  ";
+//     cout << "나누기: " << sub << "  ";
+// }
+
+// int main (void){
+//     Calculator cal;
+//     cal.init();
+
+//     cout << cal.Add (6, 20) << endl;
+//     cout << cal.Sub (6, 20) << endl;
+//     cout << cal.Mul (6, 20) << endl;
+//     cout << cal.Div (6, 20) << endl;
+
+
+
+
+
+//     return 0;
+// }
+
+// #include <iostream>
+
+// using namespace std;
+
+// int main ()
+// {
+//     int a, b;
+//     char c;
+
+//     cin >> a >> b;
+//     cin >> c;
+
+//     if(c == 'a')
+//     {
+//         cout << a + b;
+//     }
+//     else if(c == 's')
+//     {
+//         cout << a - b;
+//     }
+//     else if(c == 'm')
+//     {
+//         cout << a * b;
+//     }
+//     else if(c == 'd')
+//     {
+//         cout << a / b;
+//     }
+//     else
+//     {
+//         cout << "a, s, m ,d 중에 하나를 입력해라";
+//     }
+
+
+//     return 0;
+
+// }
+
+//-------------------------------------------------------------
+//기말
+
+//4.28
+// #include <iostream>
+// using namespace std;
+
+//     class AAA
+//     {
+//         int i, j;
+//     public:
+//         AAA(int _i, int _j) // 생성자
+//         {
+//             i =_i, j = _j;
+//         }
+//         AAA()
+//         {
+//             cout << "insert coin" << endl;
+//         }
+//         void ShowData()
+//         {
+//             cout << i << ' ' << endl;
+//         }
+//     };
+
+//     int main()
+//     {
+//         AAA aaa;
+//         AAA bbb(111,222);
+//         bbb.ShowData()
+
+
+//         return 0;
+//     }
+
+
+    
+// 예 01.
 #include <iostream>
-#include <string>
-#include <cstring>
 using namespace std;
 
-
-class Calculator {
-private:
-    int add;
-    int sub;
-    int mul;
-    int div;
+class Time {
 public:
-    void init();
-    double Add(double, double);
-    double Sub(double, double);
-    double Mul(double, double);
-    double Div(double, double);
-    void ShowOpCnt();
-
+    int hour; // 0-23
+    int minute; // 0-59
+    Time(int h, int m) {
+            hour = h;
+            minute = m;
+    }
+    void print() {
+            cout << hour << ":" << minute << endl;
+    }
 };
 
-void Calculator :: init() {
-
-    add = sub = mul = div = 0;
-}
-double Calculator :: Add(double a, double b) {
-    add++;
-    return a + b;
-}
-double Calculator :: Sub(double a, double b) {
-    sub++;
-    return a - b;
-}
-double Calculator :: Mul(double a, double b) {
-    mul++;
-    return a * b;
-}
-double Calculator :: Div(double a, double b) {
-    div++;
-    return a / b;
-}
-void Calculator::ShowOpCnt() {
-    cout << "덧셈: " << add << "  ";
-    cout << "뺄셈: " << sub << "  ";
-    cout << "곱셉: " << mul << "  ";
-    cout << "나누기: " << sub << "  ";
+int main()
+{
+   //Time a;
+   Time b(10, 25);
+   Time c{10, 25};
+   Time d = {10, 25};
+   
+   b.print();
+   c.print();
+   d.print();
+   return 0;
 }
 
-int main (void){
-    Calculator cal;
-    cal.init();
-
-    cout << cal.Add (6, 20) << endl;
-    cout << cal.Sub (6, 20) << endl;
-    cout << cal.Mul (6, 20) << endl;
-    cout << cal.Div (6, 20) << endl;
+// 예 02
 
 
 
 
 
-    return 0;
-}
 
+
+// 디폴트매개변수
