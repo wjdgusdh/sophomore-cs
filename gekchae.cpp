@@ -394,34 +394,34 @@
 
     
 // 예 01.
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-class Time {
-public:
-    int hour; // 0-23
-    int minute; // 0-59
-    Time(int h, int m) {
-            hour = h;
-            minute = m;
-    }
-    void print() {
-            cout << hour << ":" << minute << endl;
-    }
-};
+// class Time {
+// public:
+//     int hour; // 0-23
+//     int minute; // 0-59
+//     Time(int h, int m) {
+//             hour = h;
+//             minute = m;
+//     }
+//     void print() {
+//             cout << hour << ":" << minute << endl;
+//     }
+// };
 
-int main()
-{
-   //Time a;
-   Time b(10, 25);
-   Time c{10, 25};
-   Time d = {10, 25};
+// int main()
+// {
+//    //Time a;
+//    Time b(10, 25);
+//    Time c{10, 25};
+//    Time d = {10, 25};
    
-   b.print();
-   c.print();
-   d.print();
-   return 0;
-}
+//    b.print();
+//    c.print();
+//    d.print();
+//    return 0;
+// }
 
 // 예 02
 
@@ -432,3 +432,133 @@ int main()
 
 
 // 디폴트매개변수
+
+
+
+
+
+//4.29
+
+// #include <iostream>
+// using namespace std;
+//  class Rectangle
+// {       
+//    public:
+//         int width, height;
+//         Rectangle();
+//         Rectangle(int w, int h);
+//         Rectangle(int length);
+//         bool isSquare();
+// };
+// Rectangle :: Rectangle(){
+//         width = height = 1;
+
+// }
+// Rectangle :: Rectangle(int w, int h) {
+//         width = w;
+//         height = h;
+// }
+// Rectangle :: Rectangle(int length) {
+//         width = height = length;
+
+// }
+// bool Rectangle :: isSquare() {
+//         if (width == height)
+//             return true;
+//         else
+//             return false;
+
+// }
+// int main()
+// {
+//         Rectangle rect1;
+//         Rectangle rect2(4,7);
+//         Rectangle rect3(3);
+
+//         if(rect1.isSquare())
+//            cout << "rect1 정사각형" << endl;
+//         if(rect2.isSquare())
+//            cout << "rect2 정사각형" << endl;
+//         if(rect3.isSquare())
+//            cout << "rect2 정사각형" << endl;
+
+// }
+
+
+
+// #include <iostream>
+// using namespace std;
+
+
+// class Time
+// {
+//      int hour;
+//      int min;
+//      int sec;
+// public:
+//      Time(int h, int m, int s){
+//         hour = h;
+//         min = m;
+//         sec = s;
+
+//      }
+//      void ShowTime(){
+
+//      }
+//      void ShowTimeSec(){
+//         cout << hour *60*60+min*60 +sec <<endl;
+
+//      }
+        
+// };
+
+// int main()
+// {
+//         Time time1(5);
+//         Time time2(6, 12);
+//         Time time3(2, 43, 23);
+
+//         return 0;
+
+// }
+
+
+
+#include <iostream>
+#include <ctime>
+using namespace std;
+class Point
+{
+      int x;
+      int y;
+public:
+      Point() {
+cout << "Point() 호출" << endl;
+x = y = 0;
+}
+      Point(int _x, int _y) {
+         x = _x;
+         y = _y;
+}
+      int getX() { return x; }
+      int getY() { return y; }
+      void setX(int _x) { x = _x; }
+      void setY(int _y) { y = _y; }
+};
+
+int main(void)
+{
+      Point arr[5];
+      for (int i = 0; i < 5; i++)
+{
+            arr[i].setX(i * 2);
+            arr[i].setY(i * 3);
+}
+for (int j = 0; j < 5; j++)
+{
+            cout << "x: " << arr[j].getX() << ' ';
+            cout << "y: " << arr[j].getY() << endl;
+}
+return 0;
+
+}
