@@ -524,41 +524,84 @@
 
 
 
-#include <iostream>
-#include <ctime>
-using namespace std;
-class Point
-{
-      int x;
-      int y;
-public:
-      Point() {
-cout << "Point() 호출" << endl;
-x = y = 0;
-}
-      Point(int _x, int _y) {
-         x = _x;
-         y = _y;
-}
-      int getX() { return x; }
-      int getY() { return y; }
-      void setX(int _x) { x = _x; }
-      void setY(int _y) { y = _y; }
-};
+// #include <iostream>
+// #include <ctime>
+// using namespace std;
+// class Point
+// {
+//       int x;
+//       int y;
+// public:
+//       Point() {
+// cout << "Point() 호출" << endl;
+// x = y = 0;
+// }
+//       Point(int _x, int _y) {
+//          x = _x;
+//          y = _y;
+// }
+//       int getX() { return x; }
+//       int getY() { return y; }
+//       void setX(int _x) { x = _x; }
+//       void setY(int _y) { y = _y; }
+// };
 
+// int main(void)
+// {
+//       Point arr[5];
+//       for (int i = 0; i < 5; i++)
+// {
+//             arr[i].setX(i * 2);
+//             arr[i].setY(i * 3);
+// }
+// for (int j = 0; j < 5; j++)
+// {
+//             cout << "x: " << arr[j].getX() << ' ';
+//             cout << "y: " << arr[j].getY() << endl;
+// }
+// return 0;
+
+// }
+
+
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+template <typename T>
+
+void showinfo(const vector<T>& v);
 int main(void)
 {
-      Point arr[5];
-      for (int i = 0; i < 5; i++)
-{
-            arr[i].setX(i * 2);
-            arr[i].setY(i * 3);
-}
-for (int j = 0; j < 5; j++)
-{
-            cout << "x: " << arr[j].getX() << ' ';
-            cout << "y: " << arr[j].getY() << endl;
-}
-return 0;
+      vector<int> fibo = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 };
+      vector<int> se01 = { 1, 3, 5, 7, 9 };
+      vector<int> se02 = { 2, 4, 6, 8, 10 };
+      vector<double> se03 = {1, 4, 3.14, 2.9, 6.5, 2.58 };
+      vector<string> se04 = {"adidas","puma","nike"};
 
+      showinfo(fibo);
+      showinfo(se01);
+      showinfo(se02);
+      showinfo(se03);
+      showinfo(se04);
+
+
+      // for (auto& number : fibo)
+      // cout << number << ' ';
+      // for (auto& number : se01)
+      // cout << number << ' ';
+      // for (auto& number : se02)
+      // cout << number << ' ';
+      // cout << endl;
+      // return 0
+
+}
+
+template <typename T>
+void showinfo(const vector<T>& v)
+{
+      for (const auto & number : v)
+      cout << number << ' ';
+      cout << endl;
 }
