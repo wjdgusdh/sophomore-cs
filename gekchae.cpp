@@ -564,83 +564,126 @@
 // }
 
 
+// #include <iostream>
+// #include <vector>
+// #include <string>
+
+// using namespace std;
+// template <typename T>
+
+// void showinfo(const vector<T>& v);
+// int main(void)
+// {
+//       vector<int> fibo = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 };
+//       vector<int> se01 = { 1, 3, 5, 7, 9 };
+//       vector<int> se02 = { 2, 4, 6, 8, 10 };
+//       vector<double> se03 = {1, 4, 3.14, 2.9, 6.5, 2.58 };
+//       vector<string> se04 = {"adidas","puma","nike"};
+
+//       showinfo(fibo);
+//       showinfo(se01);
+//       showinfo(se02);
+//       showinfo(se03);
+//       showinfo(se04);
+
+
+//       // for (auto& number : fibo)
+//       // cout << number << ' ';
+//       // for (auto& number : se01)
+//       // cout << number << ' ';
+//       // for (auto& number : se02)
+//       // cout << number << ' ';
+//       // cout << endl;
+//       // return 0
+
+// }
+
+// template <typename T>
+// void showinfo(const vector<T>& v)
+// {
+//       for (const auto & number : v)
+//       cout << number << ' ';
+//       cout << endl;
+// }
+
+
+
+
+// #include <iostream>
+// #include <vector>
+// #include <string> // string 사용을 위해 추가해 주는 것이 좋습니다.
+
+// using namespace std;
+
+// template <typename T>
+// void showinfo(const vector<T>& v);
+
+// int main(void)
+// {
+//       vector<int> fibo = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 };
+//       vector<int> se01 = { 1, 3, 5, 7, 9 };
+//       vector<int> se02 = { 2, 4, 6, 8, 10 };
+//       vector<double> se03 = {1, 4, 3.14, 2.9, 6.5, 2.58 };
+//       vector<string> se04 = {"adidas","puma","nike"};
+
+//       showinfo(fibo);
+//       showinfo(se01);
+//       showinfo(se02);
+//       showinfo(se03);
+//       showinfo(se04);
+
+//       return 0;
+// }
+
+// template <typename T>
+// void showinfo(const vector<T>& v)
+// {
+//       // ✅ 수정된 부분: int 대신 auto 또는 T 사용
+//       for (const auto& number : v) 
+//           cout << number << ' ';
+      
+//       cout << endl;
+// }
+
+
 #include <iostream>
+#include <algorithm>
 #include <vector>
 #include <string>
-
 using namespace std;
-template <typename T>
-
-void showinfo(const vector<T>& v);
+class Person {
+private:
+      string name;
+      int age;
+public:
+      Person(string n, int a)
+      {
+            name = n;
+            age = a;
+      }
+      string get_name() { return name; }
+      int get_age() { return age; }
+      void print() {
+                  cout << name << " " << age << endl;
+      }
+};
+bool compare(Person& p, Person& q)
+{
+      return p.get_age() < q.get_age();
+}
 int main(void)
 {
-      vector<int> fibo = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 };
-      vector<int> se01 = { 1, 3, 5, 7, 9 };
-      vector<int> se02 = { 2, 4, 6, 8, 10 };
-      vector<double> se03 = {1, 4, 3.14, 2.9, 6.5, 2.58 };
-      vector<string> se04 = {"adidas","puma","nike"};
+      vector<Person> list;
+      list.push_back(Person("Kim", 30));
+      list.push_back(Person("Park", 29));
+      list.push_back(Person("Lee", 26));
+      list.push_back(Person("Jang", 32));
 
-      showinfo(fibo);
-      showinfo(se01);
-      showinfo(se02);
-      showinfo(se03);
-      showinfo(se04);
+      sort(list.begin(), list.end(), compare);
 
-
-      // for (auto& number : fibo)
-      // cout << number << ' ';
-      // for (auto& number : se01)
-      // cout << number << ' ';
-      // for (auto& number : se02)
-      // cout << number << ' ';
-      // cout << endl;
-      // return 0
-
-}
-
-template <typename T>
-void showinfo(const vector<T>& v)
-{
-      for (const auto & number : v)
-      cout << number << ' ';
-      cout << endl;
-}
-
-
-
-
-#include <iostream>
-#include <vector>
-#include <string> // string 사용을 위해 추가해 주는 것이 좋습니다.
-
-using namespace std;
-
-template <typename T>
-void showinfo(const vector<T>& v);
-
-int main(void)
-{
-      vector<int> fibo = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 };
-      vector<int> se01 = { 1, 3, 5, 7, 9 };
-      vector<int> se02 = { 2, 4, 6, 8, 10 };
-      vector<double> se03 = {1, 4, 3.14, 2.9, 6.5, 2.58 };
-      vector<string> se04 = {"adidas","puma","nike"};
-
-      showinfo(fibo);
-      showinfo(se01);
-      showinfo(se02);
-      showinfo(se03);
-      showinfo(se04);
+      for (auto& e : list)
+            e.print();
 
       return 0;
 }
 
-template <typename T>
-void showinfo(const vector<T>& v)
-{
-      // ✅ 수정된 부분: int 대신 auto 또는 T 사용
-      for (const auto& number : v) 
-          cout << number << ' ';
-      
-      cout << endl;
-}
