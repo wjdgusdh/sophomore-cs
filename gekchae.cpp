@@ -646,44 +646,83 @@
 // }
 
 
+// #include <iostream>
+// #include <algorithm>
+// #include <vector>
+// #include <string>
+// using namespace std;
+// class Person {
+// private:
+//       string name;
+//       int age;
+// public:
+//       Person(string n, int a)
+//       {
+//             name = n;
+//             age = a;
+//       }
+//       string get_name() { return name; }
+//       int get_age() { return age; }
+//       void print() {
+//                   cout << name << " " << age << endl;
+//       }
+// };
+// bool compare(Person& p, Person& q)
+// {
+//       return p.get_age() < q.get_age();
+// }
+// int main(void)
+// {
+//       vector<Person> list;
+//       list.push_back(Person("Kim", 30));
+//       list.push_back(Person("Park", 29));
+//       list.push_back(Person("Lee", 26));
+//       list.push_back(Person("Jang", 32));
+
+//       sort(list.begin(), list.end(), compare);
+
+//       for (auto& e : list)
+//             e.print();
+
+//       return 0;
+// }
+
 #include <iostream>
-#include <algorithm>
-#include <vector>
-#include <string>
+#include <cstring>
+#define _CRT_SECURE_NO_WARNINGS
 using namespace std;
-class Person {
-private:
-      string name;
-      int age;
+class Person
+{
+char* name;
+char* phone;
+int age;
 public:
-      Person(string n, int a)
-      {
-            name = n;
-            age = a;
-      }
-      string get_name() { return name; }
-      int get_age() { return age; }
-      void print() {
-                  cout << name << " " << age << endl;
-      }
+Person(const char* name, const char* phone, int age);
+~Person();
+void ShowData();
 };
-bool compare(Person& p, Person& q)
+Person::Person(const char* name, const char* phone, int age)
 {
-      return p.get_age() < q.get_age();
+this->name = new char[strlen(name) + 1];
+strcpy_s(this->name, strlen(name) + 1, name);
+this->phone = new char[strlen(phone) + 1];
+strcpy_s(this->phone, strlen(phone) + 1, phone);
+this->age = age;
 }
-int main(void)
+Person::~Person()
 {
-      vector<Person> list;
-      list.push_back(Person("Kim", 30));
-      list.push_back(Person("Park", 29));
-      list.push_back(Person("Lee", 26));
-      list.push_back(Person("Jang", 32));
-
-      sort(list.begin(), list.end(), compare);
-
-      for (auto& e : list)
-            e.print();
-
-      return 0;
+delete[]name;
+delete[]phone;
 }
-
+void Person::ShowData()
+{
+cout << "name: " << name << endl;
+cout << "phone: " << phone << endl;
+cout << "age: " << age << endl;
+}
+int main()
+{
+Person p1("Kim", "010-222-6666", 22);
+Person p2(p1); // Person p2 = p1;
+return 0;
+}
