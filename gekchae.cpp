@@ -1,367 +1,10 @@
-// #include <iostream>
-// using namespace std;
-
-// int main(void)
-// {       
-//     int n = 0;
-//     int nCnt = 0;
-
-//     cout << "3자리 정수 입력: ";
-//     cin >> n; // 예: 573
-
-//     nCnt = nCnt + (n / 100);      // 백의 자리
-//     nCnt = nCnt + (n / 10) % 10;  // 십의 자리
-//     nCnt = nCnt + (n % 10);       // 일의 자리
-
-//     cout << "입력한 자리수 합계: " << nCnt << endl;
-
-//     return 0;
-// }
-
-
-
-// #include <iostream>
-// using namespace std;
-
-// int main(void)
-// {
-//     int n1,n2,n3,n4,n5;
-//     int pSum = 0, nSum = 0;
-//     cout <<"정수 5개 입력: ";
-//     cin >>n1>>n2>>n3>>n4>>n5;
-   
-//     if(n1>0)
-//        pSum += n1;
-//     else
-//        nSum += n1;
-//     return 0;
-
-// }
-
-
-// 실습 8입력 받은 숫자 개수만큼 3의 배수를 출력하는 프로그램.
-// #include <iostream>
-// using namespace std;
-// int main(void)
-// // 입력받은 숫자 갯수만큼 3의 배수를 출력하는 프로그램
-// {
-//     int cnt;
-//     int i = 0;
-//     int n = 0;
-//     cout<<"갯수 입력:";
-//     cin >> cnt;
-//     while (n <cnt)
-//     {
-//         i+= 3;
-//         n = n + 1;
-//         cout << i << " ";
-
-       
-//     }
-    
-    
-
-
-
-
-
-
-//     return 0;
-// }
-
-
-
-// #include <iostream>
-// using namespace std;
-// int main(void)
-// {
-//     int n;
-//     int rev;
-//     cout<<"정수 입력";
-//     cin >> n;
-//     do{
-//         rev = n%10;
-//         cout << rev << " ";
-//         n = n / 10;
-//      }  while (n != 0);
-//     cout << endl;
-
-    
- 
-        
-//         return 0;
-
-// }
-
-// #include <iostream>
-// using namespace std;
-// int main(void){
-//     for(int i = 1; i <= 5; i++) {
-//         for(int j = 1; j <= i; j++) {
-//             cout << "*";
-
-//         }
-//         cout <<endl;
-//     }
-// }
-
-// #include <iostream>
-// using namespace std;
-// int main(void){
-//     int num[10];
-//         for(int i = 0 ; i<10 ; i ++)
-//         num[i] = i ;
-
-//         for (int i = 0; i < 10; i++) 
-//         cout << num[i] << " ";
-        
-
-// return 0;
-
-
-
-
-// }
-
-
-// #include <iostream>
-// using namespace std;
-// int main(void){
-
-//     int s[12];
-//     for(int i = 0; i < 12; i++)
-//         s[i] = rand() % 20;
-
-//     for(int i = 0; i < 12; i++)
-//         cout << s[i] << "  ";
-//     cout << endl;
-
-//     return 0;
-// }
-
-
-// #include <iostream>
-// using namespace std;
-
-// int sum(int a, int b, int c = 0, int d = 0) {
-//     return a + b + c + d;
-// }
-
-// int main() {
-//     cout << "sum(10, 15) = " << sum(10, 15) << endl;
-//     cout << "sum(10, 15, 25) = " << sum(10, 15, 25) << endl;
-//     cout << "sum(10, 15, 25, 30) = " << sum(10, 15, 25, 30) << endl;
-
-//     return 0;
-// }
-
-
-// #include <iostream>
-// #include <string>
-// #include <cstring>
-
-// using namespace std;
-
-// int main(){
-
-//     char name[100];
-//     char longest[100];
-//     int length = 0;
-
-//     cout << "5명의 이름을 ';'으로 구분하여 입력" << endl;
-//     cout << ">>";
-
-//     for(int i = 0; i < 5; i ++)
-//     {
-//         cin.getline(name, 100, ';');
-//         cout << i + 1 << ";" << name << endl;
-//         if(length < strlen(name)){
-
-//             length = strlen(name);
-//             strcpy_s(longest, name);
-            
-//         }
-        
-//     }
-//     cout << "가장 긴 이름: " << longest << endl;
-    
-// }
-
-// #include <iostream>
-// using namespace std;
-
-// class rectangle
-// {
-// public:
-//     int width;
-//     int height;
-
-//     int getArea(){
-
-//         return width * height;
-
-//     }
-// };
-
-
-// int main(){
-//     rectangle r;
-//     r.width = 100;
-//     r.height = 200;
-
-//     cout << "사각형의 면적:" << r.getArea() << endl;
-
-//     return 0;
-// }
-
-// #include <iostream>
-// #include <string>
-// #include <cstring>
-
-
-// using namespace std;
-
-// class Car
-// {
-// public:
-//     int speed;
-//     int gear;
-//     string color;
-
-//     void speedUp() {speed += 20;}
-//     void speedDown() { speed -= 10;}
-
-// };
-
-
-// int main()
-// {
-//     Car c1, c2;
-//     c1.speed = 80;
-//     c1.gear = 4;
-//     c1.color = "red";
-//     c1.speedUp();
-//     cout << "현재 c1의 속도는 " << c1.speed << endl;
-
-//     c2.speed = 70;
-//     c2.gear = 4;
-//     c2.color = "blue";
-//     c2.speedUp();
-//     cout << "현재 c2의 속도는 " << c2.speed << endl;
-
-//     return 0;
-// }   
-
-
-// #include <iostream>
-// #include <string>
-// #include <cstring>
-// using namespace std;
-
-
-// class Calculator {
-// private:
-//     int add;
-//     int sub;
-//     int mul;
-//     int div;
-// public:
-//     void init();
-//     double Add(double, double);
-//     double Sub(double, double);
-//     double Mul(double, double);
-//     double Div(double, double);
-//     void ShowOpCnt();
-
-// };
-
-// void Calculator :: init() {
-
-//     add = sub = mul = div = 0;
-// }
-// double Calculator :: Add(double a, double b) {
-//     add++;
-//     return a + b;
-// }
-// double Calculator :: Sub(double a, double b) {
-//     sub++;
-//     return a - b;
-// }
-// double Calculator :: Mul(double a, double b) {
-//     mul++;
-//     return a * b;
-// }
-// double Calculator :: Div(double a, double b) {
-//     div++;
-//     return a / b;
-// }
-// void Calculator::ShowOpCnt() {
-//     cout << "덧셈: " << add << "  ";
-//     cout << "뺄셈: " << sub << "  ";
-//     cout << "곱셉: " << mul << "  ";
-//     cout << "나누기: " << sub << "  ";
-// }
-
-// int main (void){
-//     Calculator cal;
-//     cal.init();
-
-//     cout << cal.Add (6, 20) << endl;
-//     cout << cal.Sub (6, 20) << endl;
-//     cout << cal.Mul (6, 20) << endl;
-//     cout << cal.Div (6, 20) << endl;
-
-
-
-
-
-//     return 0;
-// }
-
-// #include <iostream>
-
-// using namespace std;
-
-// int main ()
-// {
-//     int a, b;
-//     char c;
-
-//     cin >> a >> b;
-//     cin >> c;
-
-//     if(c == 'a')
-//     {
-//         cout << a + b;
-//     }
-//     else if(c == 's')
-//     {
-//         cout << a - b;
-//     }
-//     else if(c == 'm')
-//     {
-//         cout << a * b;
-//     }
-//     else if(c == 'd')
-//     {
-//         cout << a / b;
-//     }
-//     else
-//     {
-//         cout << "a, s, m ,d 중에 하나를 입력해라";
-//     }
-
-
-//     return 0;
-
-// }
 
 //-------------------------------------------------------------
-//기말
+// 기말
 
-//4.28
-// #include <iostream>
-// using namespace std;
+// 4.28
+//  #include <iostream>
+//  using namespace std;
 
 //     class AAA
 //     {
@@ -387,12 +30,9 @@
 //         AAA bbb(111,222);
 //         bbb.ShowData()
 
-
 //         return 0;
 //     }
 
-
-    
 // 예 01.
 // #include <iostream>
 // using namespace std;
@@ -416,7 +56,7 @@
 //    Time b(10, 25);
 //    Time c{10, 25};
 //    Time d = {10, 25};
-   
+
 //    b.print();
 //    c.print();
 //    d.print();
@@ -425,24 +65,14 @@
 
 // 예 02
 
-
-
-
-
-
-
 // 디폴트매개변수
 
-
-
-
-
-//4.29
+// 4.29
 
 // #include <iostream>
 // using namespace std;
 //  class Rectangle
-// {       
+// {
 //    public:
 //         int width, height;
 //         Rectangle();
@@ -484,11 +114,8 @@
 
 // }
 
-
-
 // #include <iostream>
 // using namespace std;
-
 
 // class Time
 // {
@@ -509,7 +136,7 @@
 //         cout << hour *60*60+min*60 +sec <<endl;
 
 //      }
-        
+
 // };
 
 // int main()
@@ -521,8 +148,6 @@
 //         return 0;
 
 // }
-
-
 
 // #include <iostream>
 // #include <ctime>
@@ -563,7 +188,6 @@
 
 // }
 
-
 // #include <iostream>
 // #include <vector>
 // #include <string>
@@ -586,7 +210,6 @@
 //       showinfo(se03);
 //       showinfo(se04);
 
-
 //       // for (auto& number : fibo)
 //       // cout << number << ' ';
 //       // for (auto& number : se01)
@@ -605,9 +228,6 @@
 //       cout << number << ' ';
 //       cout << endl;
 // }
-
-
-
 
 // #include <iostream>
 // #include <vector>
@@ -638,13 +258,12 @@
 // template <typename T>
 // void showinfo(const vector<T>& v)
 // {
-//       // ✅ 수정된 부분: int 대신 auto 또는 T 사용
-//       for (const auto& number : v) 
+//       
+//       for (const auto& number : v)
 //           cout << number << ' ';
-      
+
 //       cout << endl;
 // }
-
 
 // #include <iostream>
 // #include <algorithm>
@@ -687,42 +306,146 @@
 //       return 0;
 // }
 
-#include <iostream>
-#include <cstring>
-#define _CRT_SECURE_NO_WARNINGS
-using namespace std;
-class Person
-{
-char* name;
-char* phone;
-int age;
-public:
-Person(const char* name, const char* phone, int age);
-~Person();
-void ShowData();
-};
-Person::Person(const char* name, const char* phone, int age)
-{
-this->name = new char[strlen(name) + 1];
-strcpy_s(this->name, strlen(name) + 1, name);
-this->phone = new char[strlen(phone) + 1];
-strcpy_s(this->phone, strlen(phone) + 1, phone);
-this->age = age;
-}
-Person::~Person()
-{
-delete[]name;
-delete[]phone;
-}
-void Person::ShowData()
-{
-cout << "name: " << name << endl;
-cout << "phone: " << phone << endl;
-cout << "age: " << age << endl;
-}
-int main()
-{
-Person p1("Kim", "010-222-6666", 22);
-Person p2(p1); // Person p2 = p1;
-return 0;
-}
+// #include <iostream>
+// #include <cstring>
+// #define _CRT_SECURE_NO_WARNINGS
+// using namespace std;
+// class Person
+// {
+//     char* name;
+//     char* phone;
+//     int age;
+// public:
+//     Person(const char* name, const char* phone, int age);
+//     ~Person();
+//     void ShowData();
+// };
+// Person::Person(const char* name, const char* phone, int age)
+// {
+//     this->name = new char[strlen(name) + 1];
+//     strcpy_s(this->name, strlen(name) + 1, name);
+
+//     this->phone = new char[strlen(phone) + 1];
+//     strcpy_s(this->phone, strlen(phone) + 1, phone);
+
+//     this->age = age;
+// }
+// Person::~Person()
+// {
+//     delete[]name;
+//     delete[]phone;
+// }
+// void Person::ShowData()
+// {
+//     cout << "name: " << name << endl;
+//     cout << "phone: " << phone << endl;
+//     cout << "age: " << age << endl;
+// }
+// int main()
+// {
+//     Person p1("Kim", "010-222-6666", 22);
+//     Person p2(p1); // Person p2 = p1;
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <cstring>
+// #define _CRT_SECURE_NO_WARNINGS
+// using namespace std;
+
+// class NameCard
+// {
+//     char*name;
+//     char*phone;
+//     char*addr;
+//     char*position;
+// public:
+//     NameCard    (const char*,const char*,const char*,const char*);
+//     NameCard(const NameCard& nc);
+//     ~NameCard();
+//     void ShowData();
+// };
+
+// #include <iostream>
+// #include <cstring>
+// #define _CRT_SECURE_NO_WARNINGS
+// using namespace std;
+// class Person
+// {
+//     int age;
+//     char name[20];
+
+// public:
+//     int GetAge() const
+//     {
+//         return age;
+//     }
+//     const char *GetName() const
+//     {
+//         return name;
+//     }
+//     Person(int age = 1, const char *name = "noname")
+//     {
+//         this->age = age;
+//         strcpy_s(this->name, strlen(name) + 1, name);
+//     }
+// };
+// class Student : public Person
+// {
+//     char major[20];
+
+// public:
+//     Student(int age, const char *name, const char *major)
+//     {
+//         this->age = age;                              // 컴파일 에러
+//         strcpy_s(this->name, strlen(name) + 1, name); // 컴파일 에러
+//         strcpy_s(this->major, strlen(major) + 1, major);
+//     }
+//     const char *GetMajor() const
+//     {
+//         return major;
+//     }
+//     void ShowData() const
+//     {
+//         cout << "이름: " << GetName() << endl;
+//         cout << "나이: " << GetAge() << endl;
+//         cout << "전공: " << GetMajor() << endl;
+//     }
+// };
+// int main(void)
+// {
+//     Student Lee(20, "Im Guk Junng", "Computer");
+//     Lee.ShowData();
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <cstring>
+// #define _CRT_SECURE_NO_WARNINGS
+// using namespace std;
+
+// class Account
+// {
+// private:
+//     char acc_num[10];
+//     int balance;
+// public:
+//     Account(char* num, int bal) {
+//          strcpy_s(acc_num, strlen(num)+1, num);
+//           balance = bal;
+//     }
+// };
+
+// int main(void)
+// {
+//     // 계좌 번호: 1234-7896
+//     // 초기 입금액: 5000원
+//     // 이체 한도: 100000원
+//     KB Acount acc("1234-7896", 5000, 100000);
+//     acc.ShowData();
+//     return 0;
+// }
+
+
+
+
